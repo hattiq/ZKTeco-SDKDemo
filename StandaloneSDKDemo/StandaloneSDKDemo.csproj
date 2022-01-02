@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B8835D6-BBDA-49C5-92DF-EBA492B61C9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StandaloneSDKDemo</RootNamespace>
+    <AssemblyName>StandaloneSDKDemo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.zkemkeeper">
+      <HintPath>..\..\..\..\Desktop\standalone+sdk-6.3.1.37-doc-2.1.0-demo-1.1.15\Demo-Ver1.1.15\new\obj\x64\Debug\Interop.zkemkeeper.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\AccessMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AccessMngForm.Designer.cs">
+      <DependentUpon>AccessMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DataMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DataMngForm.Designer.cs">
+      <DependentUpon>DataMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\OtherMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\OtherMngForm.Designer.cs">
+      <DependentUpon>OtherMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PersonalizeMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PersonalizeMngForm.Designer.cs">
+      <DependentUpon>PersonalizeMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TerminalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TerminalForm.Designer.cs">
+      <DependentUpon>TerminalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UserMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\UserMngForm.Designer.cs">
+      <DependentUpon>UserMngForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Punches.cs" />
+    <Compile Include="Helper\Raw.cs" />
+    <Compile Include="Helper\SDKHelper.cs" />
+    <Compile Include="Helper\SearchforUSBCom.cs" />
+    <Compile Include="Helper\UDisk.cs" />
+    <Compile Include="Helper\UDiskStruct.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\FirstMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\FirstMenu.designer.cs">
+      <DependentUpon>FirstMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ZKMessgeBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\ZKMessgeBox.Designer.cs">
+      <DependentUpon>ZKMessgeBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\AccessMngForm.resx">
+      <DependentUpon>AccessMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DataMngForm.resx">
+      <DependentUpon>DataMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\OtherMngForm.resx">
+      <DependentUpon>OtherMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PersonalizeMngForm.resx">
+      <DependentUpon>PersonalizeMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TerminalForm.resx">
+      <DependentUpon>TerminalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserMngForm.resx">
+      <DependentUpon>UserMngForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControl\FirstMenu.resx">
+      <DependentUpon>FirstMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ZKMessgeBox.resx">
+      <DependentUpon>ZKMessgeBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\close.png" />
+    <Content Include="image\delete-circular.png" />
+    <Content Include="image\FirstMenuM.png" />
+    <Content Include="image\home-vector.png" />
+    <Content Include="image\minisize.png" />
+    <Content Include="image\photoAdd.png" />
+    <Content Include="image\photoDel.png" />
+    <Content Include="image\picAdd.png" />
+    <Content Include="image\picDel.png" />
+    <Content Include="image\reload-vector.png" />
+    <Content Include="image\remove-circular.png" />
+    <Content Include="image\settings-vector.png" />
+    <Content Include="image\unlock-vector.png" />
+    <Content Include="image\update-vector.png" />
+    <Content Include="image\ZKTeco_Gray-White.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
